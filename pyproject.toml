@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "wraper"
+version = "0.1.0"
+description = ""
+authors = ["Lord-A2K <amirkiankaveh@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.7"
+djangorestframework = "^3.15.2"
+psycopg2-binary = "^2.9.9"
+openai = "^1.37.0"
+python-dotenv = "^1.0.1"
+djangorestframework-simplejwt = "^5.3.1"
+gunicorn = "^22.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+pytest-django = "^4.8.0"
+ruff = "^0.5.1"
+
+[tool.poetry.scripts]
+start = "src.scripts:start"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
